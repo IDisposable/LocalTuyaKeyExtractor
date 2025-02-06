@@ -73,6 +73,8 @@ def get_local_keys(device_id):
         'uuid': result.get('uuid', '')
     }
 
+    print(f"{output_data['device_id']}\t{output_data['local_key']}\t{output_data['mac']}\t{output_data['uuid']}\t{output_data['custom_name']}")
+
     try:
         for index, pin in enumerate(pin_data['functions']):
             output_data[f'Function {index} code'] = pin['code']
